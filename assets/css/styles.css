@@ -85,6 +85,7 @@ button {
   border: 1px solid var(--color-gray);
   background: var(--color-white);
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 button.primary {
@@ -101,6 +102,14 @@ table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--color-light-gray-model-two);
+  border-radius: 8px;
 }
 
 th,
@@ -129,4 +138,101 @@ footer {
 
 footer a {
   color: inherit;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .week {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  #saveImageBtn {
+    grid-column: 1 / -1;
+  }
+
+  button {
+    width: 100%;
+    min-height: 40px;
+  }
+
+  table {
+    font-size: 0.82rem;
+  }
+
+  th,
+  td {
+    padding: 6px 4px;
+  }
+
+  td small {
+    display: block;
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 10px 12px;
+  }
+
+  header h1 {
+    font-size: 1.05rem;
+  }
+
+  main {
+    padding: 8px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .controls {
+    gap: 6px;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 9px 8px;
+  }
+
+  table {
+    font-size: 0.72rem;
+    table-layout: fixed;
+  }
+
+  th,
+  td {
+    padding: 5px 2px;
+    word-break: break-word;
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 28%;
+  }
+
+  td small {
+    font-size: 0.62rem;
+  }
+
+  footer {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
 }
