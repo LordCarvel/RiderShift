@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MotoShift</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100..700;1,100..700&family=Inter:ital,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>MotoShift</h1>
+  </header>
+
+  <main>
+    <section class="card" id="capture" aria-label="Escala semanal de motoboys">
+      <div class="controls">
+        <button id="prevWeekBtn" type="button">Semana anterior</button>
+        <div class="week" id="weekLabel" aria-live="polite"></div>
+        <button id="nextWeekBtn" type="button">Próxima semana</button>
+        <button class="primary" id="saveImageBtn" type="button">Salvar imagem</button>
+      </div>
+      <table id="tabela"></table>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      (c) 2025 -
+      <a href="https://github.com/LordCarvel" target="_blank" rel="noopener noreferrer">LordCarvel</a>
+      - Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
